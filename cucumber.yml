@@ -1,0 +1,4 @@
+default: --tags ~@ignore --format pretty --format json -o ./reports/cucumber.json
+
+
+# --out report<%= ENV['TEST_ENV_NUMBER'] %>.html
