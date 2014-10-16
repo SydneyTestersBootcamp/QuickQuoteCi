@@ -5,7 +5,7 @@ Given(/^I am on the SydneyTesters Life Insurance page$/) do
   expect(page).to have_content('Sydney Testers Life Insurance')
 end
 
-When(/^I submit my  details '(\d+)', '(.*?)', '(.*?)' & '(.*?)' for a life insurance quote$/) do | age, gender, state, occupation |
+When(/^I submit my details age: '(\d+)', gender: '(.*?)', state: '(.*?)' & occupation: '(.*?)' for a life insurance quote$/) do | age, gender, state, occupation |
   fill_in 'age', :with => age
   choose(gender)
   select(occupation, :from => 'occupation')
@@ -14,11 +14,11 @@ When(/^I submit my  details '(\d+)', '(.*?)', '(.*?)' & '(.*?)' for a life insur
   click_button 'Get Quote'
 end
 
-When(/^I submit my '(.*)' with incorrect values$/) do | age |
+When(/^I submit an invalid age '(.*)'$/) do | age |
   fill_in 'age', :with => age
 end
 
-Then(/^I should see the correct '(.*)' shown$/) do | premium |
+Then(/^I should see the correct premium '(.*)' shown$/) do |premium|
   expect(page).to have_content(premium)
 end
 

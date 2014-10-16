@@ -5,7 +5,7 @@ Given(/^I am on the SydneyTesters Car Insurance page$/) do
   expect(page).to have_content('Sydney Testers Car Insurance')
 end
 
-When(/^I submit my  details '(\d+)', '(.*?)', '(.*?)' & '(.*?)' for a car insurance quote$/) do | age, gender, state, make |
+When(/^I submit my details age: '(\d+)', gender: '(.*?)', state: '(.*?)' & car make: '(.*?)' for a car insurance quote$/) do |age, gender, state, make|
   select(make, :from => 'make')
   fill_in 'year', :with => "2000"
   fill_in 'age', :with => age
