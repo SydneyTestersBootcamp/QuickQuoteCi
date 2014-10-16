@@ -3,6 +3,7 @@ require 'simplecov-rcov'
 SimpleCov.formatter = SimpleCov::Formatter::RcovFormatter
 SimpleCov.start do
   add_filter("features/")
+  add_filter("gems/")
 end
 require_relative '../../app'
 require 'capybara/cucumber'
