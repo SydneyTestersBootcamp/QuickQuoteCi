@@ -7,7 +7,9 @@ require 'sinatra'
 require 'rack/test'
 require 'rspec'
 require 'simplecov'
-SimpleCov.start
+SimpleCov.start do
+  add_filter("spec/")
+end
  
 # set test environment
 set :environment, :test

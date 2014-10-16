@@ -1,5 +1,7 @@
 require 'simplecov'
-SimpleCov.start
+SimpleCov.start do
+  add_filter("features/")
+end
 require_relative '../../app'
 require 'capybara/cucumber'
 require 'selenium-webdriver'
