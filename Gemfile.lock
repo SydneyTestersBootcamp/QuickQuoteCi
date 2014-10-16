@@ -70,6 +70,8 @@ GEM
       multi_json
       simplecov-html (~> 0.8.0)
     simplecov-html (0.8.0)
+    simplecov-rcov (0.2.3)
+      simplecov (>= 0.4.1)
     sinatra (1.4.5)
       rack (~> 1.4)
       rack-protection (~> 1.4)
@@ -100,6 +102,7 @@ DEPENDENCIES
   rspec
   selenium-webdriver
   simplecov
+  simplecov-rcov
   sinatra
   therubyracer
   tilt (~> 1.4.1)
