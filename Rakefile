@@ -10,6 +10,6 @@ task :default => ["unit", "cucumber"]
 task :deploy do
   appname = ENV["APP_NAME"]
   apikey = ENV["HEROKU_API_KEY"]
-  heroku = Heroku::API.new(apikey)
+  heroku = Heroku::API.new(:api_key => apikey)
   HerokuHeadless::Deployer.deploy(appname)
 end
