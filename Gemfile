@@ -20,4 +20,4 @@ gem "selenium-webdriver"
 gem "chromedriver-helper"
 gem "simplecov"
 gem "simplecov-rcov"
-gem "heroku-headless"
+gem "heroku-headless", :git => 'https://github.com/hdushan/heroku-headless.git'
